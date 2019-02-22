@@ -6,4 +6,4 @@
 ./config.sh
 
 # Main bootRun
-java $JAVA_OPTS -jar ./app.jar
+java $JAVA_OPTS -jar ./leetcode.jar
