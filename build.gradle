@@ -44,41 +44,19 @@ dependencies {
 
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
-    compile 'org.springframework.boot:spring-boot-devtools'
-    compile 'org.apache.curator:curator-client:2.12.0'
-    compile 'org.apache.commons:commons-lang3:3.4'
-    compile 'com.getsentry.raven:raven-log4j:7.8.0'
-    compile 'net.sf.json-lib:json-lib:2.2.1:jdk15'
-    compile 'org.json:json:20140107'
-    compile 'com.google.code.gson:gson:2.0'
-    compile 'com.googlecode.json-simple:json-simple:1.1.1'
-
     
     // Test
     testCompile("org.springframework.boot:spring-boot-starter-test")
-    
-    testCompile("org.powermock:powermock-core:${powermockVersion}")
-    testCompile("org.powermock:powermock-module-junit4:${powermockVersion}")
-    testCompile("org.powermock:powermock-module-junit4-rule-agent:${powermockVersion}")
-    testCompile("org.powermock:powermock-module-javaagent:${powermockVersion}")
-    testCompile("org.powermock:powermock-api-mockito:${powermockVersion}")
-    
     testCompile("junit:junit:4.12")
     
-    testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
 configurations.all {
     exclude group: "org.slf4j", module: "slf4j-log4j12"
 }
 
-task wrapper(type: Wrapper){
-    gradleVersion='2.9'
-    distributionUrl='http://cdn-img-oss-prod.kuick.cn/tool/gradle-2.9-bin.zip'
-}
-
 jar {
-    baseName = "app"
+    baseName = "leetcode"
     destinationDir = new File("$projectDir/build/libs")
 }
 
