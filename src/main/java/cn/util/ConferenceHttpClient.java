@@ -49,9 +49,9 @@ public class ConferenceHttpClient {
 			
 			if (sb.length() > 0) {
 				sb.setLength(sb.length() - 1);
-			};
-			
-			os.write(sb.toString().getBytes("UTF-8"));// 传入参数
+			}
+
+            os.write(sb.toString().getBytes("UTF-8"));// 传入参数
 			os.flush();
 			os.close();
 
